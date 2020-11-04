@@ -9,18 +9,14 @@ import UIKit
 
 class PokemonCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var imagePokemon: UIImageView!
     @IBOutlet weak var namePokemon: UILabel!
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+    
     func configName(name:String) {
         namePokemon.text = name
     }
-
 }

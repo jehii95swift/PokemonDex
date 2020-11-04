@@ -14,6 +14,7 @@ class Controller {
     func requestPokemons(closure: @escaping ([PokemonIndex]) -> () ) {
         services.requesPokemones(closure: closure)
     }
+    
     func getPokemons() -> [PokemonIndex] {
         return services.pokeIndexes
     }

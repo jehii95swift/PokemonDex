@@ -11,13 +11,7 @@ import ObjectMapper
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
-    
-    
-    
     @IBOutlet weak var pokemonCollectionView: UICollectionView!
-    
-    
     
     let controller = Controller()
     var pokemonIndex: [PokemonIndex] = []
@@ -29,11 +23,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         controller.requestPokemons { pokemonIndex in
             self.pokemonIndex = pokemonIndex
             self.pokemonCollectionView.reloadData()
-
         }
-        pokemonCollectionView.dataSource = self
         
-        // Do any additional setup after loading the view.
+        pokemonCollectionView.dataSource = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,14 +51,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func registerCell () {
         pokemonCollectionView.register(UINib(nibName: "PokemonCell", bundle: nil), forCellWithReuseIdentifier: "PokemonCell")
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var pokemon = pokemonIndex[indexPath.row]
         let vc = DetailViewController()
         vc.loadViewIfNeeded()
         vc.configureViewDetail(pokeindex: pokemon)
         self.present(vc, animated: true, completion: nil)
-        
     }
-    
 }
-

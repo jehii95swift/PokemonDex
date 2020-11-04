@@ -14,16 +14,10 @@ class PokeStats:Mappable {
     var stat: [String:String] = [:]
     
     required init?(map: Map) {
-        
     }
     
     func mapping(map: Map) {
         baseStat    <- map["base_stat"]
         stat     <- map["stat"]
-
-
     }
-    
-    
-    
 }

@@ -9,16 +9,15 @@ import Foundation
 import ObjectMapper
 
 class PokemonIndex: Mappable {
+    
+    var name: String = ""
+    var url: String = ""
+    
     required init?(map: Map) {
-        
     }
     
     func mapping(map: Map) {
         name    <- map["name"]
         url    <- map["url"]
     }
-    
-    var name: String = ""
-    var url: String = ""
-    
 }
