@@ -22,6 +22,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         registerCell()
         statsCollectionView.delegate = self
         statsCollectionView.dataSource = self
+        configGradient()
     }
     
     func configureViewDetail(pokeindex:PokemonIndex) {
@@ -66,6 +67,18 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 375, height: 60)
     }
+    
+    func configGradient() {
+            let gradient: CAGradientLayer = CAGradientLayer()
+            
+            gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+            gradient.locations = [0.0 , 1.0]
+            gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+            gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+            gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+            self.view.layer.insertSublayer(gradient, at: 0)
+        }
+
 
 
 }
