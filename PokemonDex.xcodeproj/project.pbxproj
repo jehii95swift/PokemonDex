@@ -113,6 +113,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041E42552553784F0032E937 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				041E4233255317920032E937 /* PokemonCell.swift */,
+				041E424E255358430032E937 /* StatCell.swift */,
+				041E4234255317920032E937 /* PokemonCell.xib */,
+				041E424F255358430032E937 /* StatCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		049354E42552FDEB00A21DA5 = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +149,11 @@
 		049354EF2552FDEB00A21DA5 /* PokemonDex */ = {
 			isa = PBXGroup;
 			children = (
-				04935530255301CA00A21DA5 /* Controller */,
-				0493552F255301C200A21DA5 /* View */,
 				0493552E255301B900A21DA5 /* Model */,
-				049354F02552FDEB00A21DA5 /* AppDelegate.swift */,
+				0493552F255301C200A21DA5 /* View */,
+				04935530255301CA00A21DA5 /* Controller */,
 				049354F22552FDEB00A21DA5 /* SceneDelegate.swift */,
-				049354F62552FDEB00A21DA5 /* Main.storyboard */,
+				049354F02552FDEB00A21DA5 /* AppDelegate.swift */,
 				049354F92552FDEC00A21DA5 /* Assets.xcassets */,
 				049354FB2552FDEC00A21DA5 /* LaunchScreen.storyboard */,
 				049354FE2552FDEC00A21DA5 /* Info.plist */,
@@ -183,13 +193,11 @@
 		0493552F255301C200A21DA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				049354F62552FDEB00A21DA5 /* Main.storyboard */,
 				049354F42552FDEB00A21DA5 /* ViewController.swift */,
 				041E423A255335BA0032E937 /* DetailViewController.swift */,
 				041E423B255335BA0032E937 /* DetailViewController.xib */,
-				041E4233255317920032E937 /* PokemonCell.swift */,
-				041E4234255317920032E937 /* PokemonCell.xib */,
-				041E424E255358430032E937 /* StatCell.swift */,
-				041E424F255358430032E937 /* StatCell.xib */,
+				041E42552553784F0032E937 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";

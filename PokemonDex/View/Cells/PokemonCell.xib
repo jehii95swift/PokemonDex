@@ -17,8 +17,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOS-5g-f5r">
-                        <rect key="frame" x="0.0" y="0.0" width="60" height="196"/>
+                        <rect key="frame" x="0.0" y="73" width="60" height="50"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="50" id="5KX-p1-ZwX"/>
                             <constraint firstAttribute="width" constant="60" id="fmy-oP-CN8"/>
                         </constraints>
                     </imageView>
@@ -33,9 +34,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="3mM-Bl-CaK" firstAttribute="leading" secondItem="XOS-5g-f5r" secondAttribute="trailing" constant="44" id="Dqz-rB-jQe"/>
-                <constraint firstAttribute="bottom" secondItem="XOS-5g-f5r" secondAttribute="bottom" id="G5d-4S-XEa"/>
                 <constraint firstItem="3mM-Bl-CaK" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="GgQ-Jl-WJe"/>
-                <constraint firstItem="XOS-5g-f5r" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oNy-Jt-CiM"/>
+                <constraint firstItem="XOS-5g-f5r" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="hew-yF-fOu"/>
                 <constraint firstItem="XOS-5g-f5r" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="r0E-tc-4oj"/>
             </constraints>
             <size key="customSize" width="386" height="196"/>

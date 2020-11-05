@@ -11,24 +11,22 @@ import ObjectMapper
 
 class Services {
     
-    var pokeIndexes: [PokemonIndex] = []
+    let baseUrl = "https://pokeapi.co/api/v2/pokemon/"
     
     func requesPokemones(closure: @escaping ([PokemonIndex]) -> ()  ) {
-        AF.request("https://pokeapi.co/api/v2/pokemon").responseJSON { response in
+        AF.request(baseUrl).responseJSON { response in
 
             if let json = try! response.result.get() as? [String: Any] {
                 let results = json["results"] as? [[String:String]]
                 
                  let pokeIndexes = ObjectMapper.Mapper<PokemonIndex>().mapArray(JSONArray: results!)
-                  print(pokeIndexes)
-                self.pokeIndexes = pokeIndexes
-                closure(pokeIndexes)
+                 closure(pokeIndexes)
             }
         }
     }
     
     func getInfo(name: String, closure:@escaping (Pokemon) -> () ) {
-        AF.request("https://pokeapi.co/api/v2/pokemon/\(name)").responseJSON { response in
+        AF.request("\(baseUrl)\(name)").responseJSON { response in
             
             if let json = try! response.result.get() as? [String: Any] {
                 

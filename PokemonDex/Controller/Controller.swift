@@ -15,10 +15,6 @@ class Controller {
         services.requesPokemones(closure: closure)
     }
     
-    func getPokemons() -> [PokemonIndex] {
-        return services.pokeIndexes
-    }
-    
     func getInfo(name: String, closure:@escaping (Pokemon) -> () ) {
         services.getInfo(name: name, closure: closure)
     }
